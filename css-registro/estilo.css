@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@font-face {
+	font-family: 'Sh';
+	src: url(../webfonts/Shentox.ttf);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html::-webkit-scrollbar{
+	background-color: #1f052b;
+	width:  0.51vw;
+}
+html{
+	scroll-behavior: smooth;
+}
+html::-webkit-scrollbar-thumb{
+	background-image: linear-gradient(transparent, #c445ff);
+	border-radius: 15.22vh;
+}
+body{
+	background: linear-gradient(to top, #430063 10%, #831bb3) no-repeat fixed;
+    overflow-x: hidden;
+}
+
+.contenedor--izquierda{
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	display: flex;
+	background: url(../img/registro/loader.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	box-shadow: 0vh 3.04vh 7.61vh #000;
+	z-index: 100;
+    align-items: center;
+}
+
+.contenedor-texto{
+	position: relative;
+    display: inline-block;
+    text-align: center;
+	margin: 0vh 4vh;
+	background-color: #0000006b;
+}
+
+.contenedor-texto p{
+	font-size: 4vh;
+	color: white;
+	text-align: justify;
+    font-family: 'Sh';
+    margin: 6.08vh 6.08vh 0vh 6.08vh ;
+}
+
+.contenedor-texto .frase {
+	text-align: center;
+    margin-top: 3vh;
+}
+
+.caja-btn{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 4.56vh 0vh;
+    align-items: center;
+
+}
+.caja-btn span{
+    margin: 0vh 0vh 1.52vh 0vh;
+    color: #fff;
+    font-family: 'Sh';
+    font-size:  3.04vh
+}
+
+.contenedor-boton {
+    display: flex;
+    width: 14.64vw;
+    height: 7.61vh;
+    border-radius:  3.04vh;
+    margin: 0vh;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.contenedor-boton:hover{
+    box-shadow: inset  0.30vh 0 0 0#ae00ff;
+    transition: 1s ease;
+}
+
+.contenedor-boton a{
+    color: #ffffff;
+    font-family: 'Sh';
+    text-decoration: none;
+    font-size:  3.04vh;
+    text-shadow: none;
+    transition: 1s ease;
+}
+
+.caja-btn .back {
+    font-size: 7vh;
+    width:  4.2vw;
+    border-radius: 50%;
+    margin-top:  3.04vh;
+    transition: 1s ease;
+}
+
+.back:hover{
+    background-color: transparent;
+    transition: 1s ease;
+    box-shadow: inset 0.30vh 0 0 0#ae00ff;
+}
+
+.contenedor-formulario {
+    height: auto;
+	width: 50%;
+	display: block;
+	position: absolute;
+	left: 50%;
+	background-image: linear-gradient(to right, #311041 10%, #1f052b);
+	user-select: none;
+}
+
+.titulo{
+	color: white;
+    position: relative;
+	font-size: 6vh;
+	font-family: 'Sh', sans-serif;
+    margin: 10vh 35vh 0vh 35vh;
+}
+
+.subtitulo{
+	color: white;
+    position: relative;
+	font-family: 'Sh', sans-serif;
+	font-size: 3vh;
+	white-space: nowrap;
+    margin: 1vh 22vh 0vh 22vh;
+}
+
+.formulario {
+	font-weight: 700;
+	display: block;
+    margin: 0vh 13.69vh;
+}
+
+.fas{
+	display: block;
+	color: white;
+}
+
+.formulario__label {
+	color: white;
+	display: inline-block;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	font-family: 'Sh', sans-serif;
+	font-size:  2.50vh;
+    margin:  3.04vh 0vh;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	background: #F0EDED;
+	border: 0.45vh solid transparent;
+	border-radius: 7.60vh;
+	transition: .3s ease all;
+	font-family: 'Sh', sans-serif;
+	font-size:  2.50vh;
+    width: 35vw;
+    height: 6vh;
+    padding-left: 2vh;
+}
+
+.formulario__input:focus {
+	border:  0.45vh solid #15ff00;
+	outline: none;
+	box-shadow: 0.45vh 0vh 4.56vh rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	color: #fff;
+	font-size: 2.20vh;
+	width: 100vw;
+	position: relative;
+	margin: 3vh 0vh 0vh 0vh;
+	display: none;
+	transition: 0.4s all ease;
+	font-family: 'Sh', sans-serif;
+}
+
+.formulario__input-error-activo {
+	display: inline-block;
+	transition: 0.4s all ease;
+}
+
+.formulario__validacion-estado {
+	position: absolute;	
+	z-index: 100;
+	font-size: 2.73vh;
+	opacity: 0;
+    top: 2vh;
+    right: 6vh;
+}
+
+
+.formulario__checkbox {
+	margin: 3vh 10vh 0vh 10vh;
+    font-size: 40px;
+}
+
+.formulario__mensaje {
+	background: #ff0000;
+	position: relative;
+	border-radius: 1.52vh;
+	display: none;
+    padding: 2vh;
+    margin: 0vh 10vh 3vh 10vh;
+}
+
+.formulario__mensaje p{
+	position: relative;
+	color: #ffffff;
+	font-size: 2.73vh;
+	text-align: center;
+}
+
+
+.fa-exclamation-triangle{
+	color: white;
+	position: relative;
+}
+
+.formulario__mensaje-activo {
+	display: inline-block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+	font-family: 'Sh', sans-serif;
+	user-select: none;
+}
+
+.formulario__grupo-btn-enviar {
+	align-items: center;
+}
+
+
+.formulario__btn {
+	background: #5e5c5cfb;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 7.61vh;
+	cursor: pointer;
+	transition: .3s ease all;
+	position: relative;
+	user-select: none;
+    width: 21.96vw;
+    height: 6.08vh;
+    font-size: 3vh;
+    margin: 0vh 15vh 3vh 15vh;
+    font-family: 'Sh';
+}
+
+.formulario__mensaje-exito {
+	font-size: 3.50vh;
+	color: #fff;
+	background-color: #02E50C;	
+	border-radius: 1.52vh;
+	font-family: 'Sh', sans-serif;
+	display: none;
+	text-align: center;
+	transition: 0.4s all ease;
+    padding: 20px;
+	margin-bottom: 5vh;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border:  0.45vh solid #bb2929;
+}
